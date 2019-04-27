@@ -1,0 +1,25 @@
+<div class="card">
+  <div class="card-body">
+    <form>
+      <div class="form-group">
+        <label class="col-md-4">Enter CUG Number</label>
+        <input type="text" class="form-control" id="cug_no" name="cug_no" [(ngModel)]="cug_no"/>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary" (click)="verifyCug()">Enter cug</button>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Enter OTP Number</label>
+        <input type="text" class="form-control" id="otp_no" name="otp_no" [(ngModel)]="otp_no"/>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary" (click)="verifyOtp()">Enter otp</button>
+      </div>
+    </form>
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="sync()">Sync</button>
+  <button type="submit" class="btn btn-primary" (click)="updatedTime()">Updated time</button>
+  <button type="submit" class="btn btn-primary" (click)="check()">check </button>
+
+
+</div>
