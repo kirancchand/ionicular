@@ -14,7 +14,7 @@ export class IndexComponent implements OnInit {
 
   constructor( 
   			 private vs: VerifyService,
-  			 private router: Router
+  			 private router: Router,
   			 ) { }
    ngOnInit() {
   }
@@ -85,12 +85,18 @@ export class IndexComponent implements OnInit {
 	   }
   }
 
-  async check()
+async check()
   {
 	   try
 	   {
 	   	  const result=this.vs.check();
-
+	   	  /* .subscribe(data => {
+	          this.info = data;
+	           
+	                  console.log("inside");   
+	                     
+	          
+	          });*/
 	   	  
 	   }
 	   catch(err)

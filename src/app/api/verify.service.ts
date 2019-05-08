@@ -48,11 +48,18 @@ checkurl = 'http://localhost/directory_appv1/kc_controller/KC_Controller/check';
 		      		console.log(response);
 		      		let list = ['kc_category','kc_contacts','kc_email','kc_groups','kc_phone_number'];
 		      
-					for (var i = 0; i < list.length;i++) {
+					for (var i = 0; i < list.length;i++) 
+					{
 
-					    if(response[i][list[i]]['count']==1)
+						var count=response[i][list[i]]['count'];
+					    if(count>0)
 		      			{
-		      				console.log(response[i][list[i]]);
+		      				for(var j=0;j<count;j++)
+		      				{
+		      					//var data=response[i][list[i]][j];
+		      					console.log(response[i][list[i]][j]['id']);
+		      				}
+		      				
 		      			}
 		      			else
 			      		{
